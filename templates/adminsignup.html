@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <h2>ADMIN SIGNUP</h2>
+    <div class="container" style="margin-bottom:100px;">
+<form method="post" enctype="multipart/form-data">
+  <div class="mb-3">
+    {% csrf_token %}
+    <label class="form-label">Username</label>
+    <input type="text" class="form-control" name="u" placeholder="Enter username">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Firstname</label>
+    <input type="text" class="form-control" name="v" placeholder="Enter First name">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Lastname</label>
+    <input type="text" class="form-control" name="w" placeholder="Enter Last name">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Email</label>
+    <input type="email" class="form-control" name="x" placeholder="Enter email">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Password</label>
+    <input type="password" class="form-control" name="y" placeholder="Enter password">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">phonenumber</label>
+    <input type="number" class="form-control" name="a" placeholder="Enter phonenumber">
+  </div>
+  <button type="submit" class="btn btn-primary">Signup</button>
+</form></div>
+{% endblock %}
